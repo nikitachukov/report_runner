@@ -1,0 +1,29 @@
+{
+  "connection": {
+    "host": "oracle",
+    "port": 1521,
+    "sid": "lisa",
+    "user": "lisa",
+    "password": "lisaasil"
+  },
+  "db": {
+    "stored_procedure": {
+
+      "sql": "begin\n:result := chukov_test_package.test_sp(:ppolicyno);\nend; ",
+      "args": [
+        {
+          "name": "result"
+        },
+        {
+          "name": "ppolicyno",
+          "value": "30005017"
+        }
+
+
+      ]
+    },
+    "select": {
+      "sql": "select id,initialid,followid,parentid,policyno from test_sp_table"
+    }
+  }
+}
