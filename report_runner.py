@@ -14,7 +14,7 @@ from pprint import pprint
 
 def init_logger():
     global logger
-    LOG_FILENAME = 'report_export.txt'
+    LOG_FILENAME = 'report_export.log'
     formatter = logging.Formatter("%(asctime)s %(levelname)s %(funcName)s:%(lineno)d - %(message)s")
     logger = logging.getLogger('logger')
     logger.setLevel(logging.DEBUG)
